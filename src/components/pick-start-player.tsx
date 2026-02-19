@@ -1,26 +1,13 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import Button from "./button";
 
-const PickStartPlayer = ({
-  handleStart,
-}: {
-  handleStart: (playerGoesFirst: boolean) => void;
-}) => {
+const PickStartPlayer = ({ handleStart }: any) => {
   return (
     <View style={styles.center}>
       <Text style={styles.subtitle}>Who goes first?</Text>
       <View style={styles.row}>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => handleStart(true)}
-        >
-          <Text style={styles.buttonText}>You Go First</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => handleStart(false)}
-        >
-          <Text style={styles.buttonText}>Bot Goes First</Text>
-        </TouchableOpacity>
+        <Button title="You Go First" onPress={() => handleStart(true)} />
+        <Button title="Bot Goes First" onPress={() => handleStart(false)} />
       </View>
     </View>
   );
@@ -34,15 +21,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  title: { fontSize: 32, fontWeight: "700", marginBottom: 8 },
   subtitle: { fontSize: 18, marginBottom: 16 },
   row: { flexDirection: "row" },
-  button: {
-    backgroundColor: "#007AFF",
-    paddingVertical: 12,
-    paddingHorizontal: 16,
-    borderRadius: 6,
-    margin: 8,
-  },
-  buttonText: { color: "white", fontWeight: "600" },
 });
