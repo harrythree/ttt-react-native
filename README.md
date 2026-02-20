@@ -21,6 +21,10 @@ I started this project by trying to tackle to Tic-Tac-Toe bot player logic. I di
 
 I generated a new React Native project using the Expo CLI, using the Default TypeScript project. This would give me just enough to start building out the UI without adding too much unnecessary code.
 
+#### TypeScript
+
+I use TypeScript for everything these days, so of course I used it for this project. Luckily the Expo Default project sets up all of the TypeScript packages and configuration for us, making it super easy to just start writing code. Even though I have been writing JavaScript for almost 15 years now, I can't see myself ever going back to purposely writing plain ole JavaScript again.
+
 ### Hooks
 
 Once I got the project scaffolded, I wanted to create a React Hook for the game logic. I was able to modify the AI generated code to very easily drop into my new hook to and begin to expose the logic that would be needed by the UI to make the game playable.
