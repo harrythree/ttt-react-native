@@ -1,7 +1,12 @@
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import { COLORS, TYPOGRAPHY } from "../themes/theme";
 
-const CellButton = ({ onPress, title }: any) => {
+interface CellButtonTypes {
+  title: string;
+  onPress: () => void;
+}
+
+const CellButton = ({ onPress, title }: CellButtonTypes) => {
   return (
     <TouchableOpacity style={styles.cell} onPress={onPress}>
       <Text style={styles.cellText}>{title}</Text>

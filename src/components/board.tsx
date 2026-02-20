@@ -1,10 +1,18 @@
 import { StyleSheet, Text, View } from "react-native";
 
+import { Cell } from "../hooks/game";
 import { SPACING, TYPOGRAPHY } from "../themes/theme";
 import CellButton from "./cell-button";
 
-const Board = ({ board, handlePress, playerSymbol, botSymbol }: any) => {
-  const cellButtons = board.map((cell: string, boardIndex: number) => (
+interface BoardProps {
+  board: Cell[];
+  handlePress: (index: number) => void;
+  playerSymbol: Cell;
+  botSymbol: Cell;
+}
+
+const Board = ({ board, handlePress, playerSymbol, botSymbol }: BoardProps) => {
+  const cellButtons = board.map((cell: Cell, boardIndex: number) => (
     <CellButton
       key={boardIndex}
       title={cell ?? ""}

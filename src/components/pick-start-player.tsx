@@ -2,7 +2,11 @@ import { StyleSheet, Text, View } from "react-native";
 import { SPACING, TYPOGRAPHY } from "../themes/theme";
 import Button from "./button";
 
-const PickStartPlayer = ({ handleStart }: any) => {
+interface PickStartPlayerTypes {
+  handleStart: (playerStarts: boolean) => void;
+}
+
+const PickStartPlayer = ({ handleStart }: PickStartPlayerTypes) => {
   return (
     <View style={styles.center}>
       <Text style={styles.subtitle}>Who goes first?</Text>
