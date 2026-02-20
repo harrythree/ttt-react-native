@@ -27,13 +27,13 @@ I use TypeScript for everything these days, so of course I used it for this proj
 
 ### Hooks
 
-Once I got the project scaffolded, I wanted to create a React Hook for the game logic. I was able to modify the AI generated code to very easily drop into my new hook to and begin to expose the logic that would be needed by the UI to make the game playable.
+Once I got the project scaffolded, I wanted to create a React Hook for the game logic. I was able to modify the AI generated code to very easily drop it into my new hook and begin to expose the logic that would be needed by the UI to make the game playable.
 
-All of the state of the game is managed within the `useGame` hook using `useState`. This allowed me to expose only state and methods that were needed to play the game and keep all of the logic within either the hook itself or within the `game.ts` utility file.
+All of the state of the game is managed within the `useGame` hook using `useState` hooks. This allowed me to expose only state and methods that were needed to play the game and keep all of the logic within either the hook itself or within the `game.ts` utility file.
 
 ### Components and Styling
 
-I created a couple of examples of how I like to build reusable components as well as a simple approach to theming/styling. I like create a theme that pulls together a lot of the high level styles into one place so that the theme and styling is consistent across the UI. The ones I added here were Colors, Spacing, and Typography. This approach can be combined with a lot of styling frameworks like `react-native-unistyles` or `Styled Components`.
+I created a couple of examples of how I like to build reusable components as well as a simple approach to theming/styling. I like to create a theme that pulls together a lot of the high level styles into one place so that the theme and styling is consistent across the UI. The ones I added here were Colors, Spacing, and Typography.
 
 ### Testing
 
