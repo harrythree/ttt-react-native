@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 
-import { Cell } from "../hooks/game";
 import { SPACING, TYPOGRAPHY } from "../themes/theme";
+import { Cell } from "../types/game";
 import CellButton from "./cell-button";
 
 interface BoardProps {

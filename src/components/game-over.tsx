@@ -1,29 +1,26 @@
 import { StyleSheet, Text, View } from "react-native";
 
 import { SPACING, TYPOGRAPHY } from "../themes/theme";
+import { GameResult, Result } from "../types/game";
 import Button from "./button";
 
-enum GameResult {
-  WIN = "win",
-  LOSE = "lose",
-  DRAW = "draw",
-}
-
 interface GameOverTypes {
-  result: GameResult;
+  result: Result | null;
   newGame: () => void;
 }
 
+const resultTitles = {
+  [GameResult.WIN]: "You Won",
+  [GameResult.LOSE]: "You Lost",
+  [GameResult.DRAW]: "Draw",
+};
+
 const GameOver = ({ result, newGame }: GameOverTypes) => {
-  const resultText = {
-    [GameResult.WIN]: "You Won",
-    [GameResult.LOSE]: "You Lost",
-    [GameResult.DRAW]: "Draw",
-  };
+  const resultText = result ? resultTitles[result] : "";
 
   return (
     <View style={styles.resultBox}>
-      <Text style={styles.resultText}>{resultText[result]}</Text>
+      <Text style={styles.resultText}>{resultText}</Text>
       <Button title="New Game" onPress={newGame} />
     </View>
   );

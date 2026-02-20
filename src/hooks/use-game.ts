@@ -1,13 +1,7 @@
 import { useEffect, useState } from "react";
 
-import {
-  Cell,
-  checkWinner,
-  emptyBoard,
-  findBestMove,
-  isFull,
-  Result,
-} from "./game";
+import { Cell, GameResult, Result } from "../types/game";
+import { checkWinner, emptyBoard, findBestMove, isFull } from "./game";
 
 const useGame = () => {
   const [board, setBoard] = useState<Cell[]>(emptyBoard());
@@ -26,7 +20,8 @@ const useGame = () => {
     const winner = checkWinner(board);
 
     if (winner) {
-      const resultValue = winner === playerSymbol ? "win" : "lose";
+      const resultValue =
+        winner === playerSymbol ? GameResult.WIN : GameResult.LOSE;
 
       setGameOver(true);
       setResult(resultValue);
@@ -34,7 +29,7 @@ const useGame = () => {
 
     if (isFull(board)) {
       setGameOver(true);
-      setResult("draw");
+      setResult(GameResult.DRAW);
     }
 
     if (currentTurn === botSymbol && !gameOver) {

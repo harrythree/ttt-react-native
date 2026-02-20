@@ -1,9 +1,6 @@
-export type Cell = "X" | "O" | null;
-export type Result = "win" | "lose" | "draw" | null;
+import { Cell } from "../types/game";
 
-export const emptyBoard = (): Cell[] => Array(9).fill(null);
-
-export const winningLines = [
+const winningLines = [
   [0, 1, 2],
   [3, 4, 5],
   [6, 7, 8],
@@ -13,6 +10,8 @@ export const winningLines = [
   [0, 4, 8],
   [2, 4, 6],
 ];
+
+export const emptyBoard = (): Cell[] => Array(9).fill(null);
 
 export function isFull(board: Cell[]) {
   return board.every((c) => c !== null);
