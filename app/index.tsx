@@ -5,6 +5,7 @@ import Board from "../src/components/board";
 import GameOver from "../src/components/game-over";
 import PickStartPlayer from "../src/components/pick-start-player";
 import useGame from "../src/hooks/use-game";
+import { COLORS } from "../src/themes/theme";
 
 export default function Index() {
   const {
@@ -49,6 +50,6 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: COLORS.background,
   },
 });

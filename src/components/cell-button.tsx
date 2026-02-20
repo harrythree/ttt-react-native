@@ -1,4 +1,5 @@
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import { COLORS, TYPOGRAPHY } from "../themes/theme";
 
 const CellButton = ({ onPress, title }: any) => {
   return (
@@ -15,9 +16,12 @@ const styles = StyleSheet.create({
     width: "33.3333%",
     height: "33.3333%",
     borderWidth: 1,
-    borderColor: "#333",
+    borderColor: COLORS.border,
     alignItems: "center",
     justifyContent: "center",
   },
-  cellText: { fontSize: 48, fontWeight: "700" },
+  cellText: {
+    fontSize: TYPOGRAPHY.sizes.cell,
+    fontWeight: TYPOGRAPHY.weights.bold,
+  },
 });

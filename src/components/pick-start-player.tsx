@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
+import { SPACING, TYPOGRAPHY } from "../themes/theme";
 import Button from "./button";
 
 const PickStartPlayer = ({ handleStart }: any) => {
@@ -21,6 +22,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  subtitle: { fontSize: 18, marginBottom: 16 },
+  subtitle: {
+    fontSize: TYPOGRAPHY.sizes.heading,
+    marginBottom: SPACING.sm,
+  },
   row: { flexDirection: "row" },
 });

@@ -1,3 +1,4 @@
+import { COLORS, TYPOGRAPHY } from "@/src/themes/theme";
 import { Stack } from "expo-router";
 
 export default function RootLayout() {
@@ -6,12 +7,11 @@ export default function RootLayout() {
       screenOptions={{
         title: "Tic-Tac-Toe",
         headerStyle: {
-          // move color to shared style
-          backgroundColor: "#007AFF",
+          backgroundColor: COLORS.primary,
         },
-        headerTintColor: "#fff",
+        headerTintColor: COLORS.textLight,
         headerTitleStyle: {
-          fontWeight: "bold",
+          fontWeight: TYPOGRAPHY.weights.bold,
         },
       }}
     />

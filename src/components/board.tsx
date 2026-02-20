@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 
+import { SPACING, TYPOGRAPHY } from "../themes/theme";
 import CellButton from "./cell-button";
 
 const Board = ({ board, handlePress, playerSymbol, botSymbol }: any) => {
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
     height: 300,
     flexDirection: "row",
     flexWrap: "wrap",
-    marginTop: 24,
+    marginTop: SPACING.lg,
   },
-  info: { fontSize: 16 },
+  info: { fontSize: TYPOGRAPHY.sizes.body },
 });

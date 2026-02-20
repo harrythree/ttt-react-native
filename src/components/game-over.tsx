@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 
+import { SPACING, TYPOGRAPHY } from "../themes/theme";
 import Button from "./button";
 
 const GameOver = ({ result, newGame }: any) => {
@@ -17,6 +18,10 @@ const GameOver = ({ result, newGame }: any) => {
 export default GameOver;
 
 const styles = StyleSheet.create({
-  resultBox: { marginTop: 24, alignItems: "center" },
-  resultText: { fontSize: 28, fontWeight: "700", marginBottom: 12 },
+  resultBox: { marginTop: SPACING.lg, alignItems: "center" },
+  resultText: {
+    fontSize: TYPOGRAPHY.sizes.heading,
+    fontWeight: TYPOGRAPHY.weights.bold,
+    marginBottom: SPACING.sm,
+  },
 });

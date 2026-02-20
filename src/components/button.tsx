@@ -1,5 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
+import { COLORS, SPACING, TYPOGRAPHY } from "../themes/theme";
+
 const Button = ({ onPress, title }: any) => {
   return (
     <TouchableOpacity style={styles.button} onPress={onPress}>
@@ -12,11 +14,14 @@ export default Button;
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: "#007AFF",
-    paddingVertical: 12,
-    paddingHorizontal: 16,
-    borderRadius: 6,
-    margin: 8,
+    backgroundColor: COLORS.primary,
+    paddingVertical: SPACING.md,
+    paddingHorizontal: SPACING.md,
+    borderRadius: SPACING.sm,
+    margin: SPACING.md,
   },
-  buttonText: { color: "white", fontWeight: "600" },
+  buttonText: {
+    color: COLORS.textLight,
+    fontWeight: TYPOGRAPHY.weights.medium,
+  },
 });
